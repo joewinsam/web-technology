@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URK20CS1054 - Exp-5 Onchange</title>
+    <script>
+        function convert(){
+            var dollar=document.getElementById('dollar').value;
+            var currency=document.getElementById('currency').value;
+            var result="";
+            switch(currency){
+                case "INR": result=dollar*78;
+                break;
+                case "USD": result=dollar;
+                break;
+                case "YEN": result= dollar*138;
+                break;
+            }
+            document.getElementById('result').innerHTML=result;
+        }
+
+
+    </script>
+</head>
+<body>
+   Amount(dollar): <input type="text" id="dollar" onkeyup="convert()"> <br> <br>
+   Select currency:
+   <select id="currency" onchange="convert()">
+    <option>INR</option>
+    <option>USD</option>
+    <option>YEN</option>
+   </select>
+    Result:<div id="result" style="color:blue;font-size:25px;">
+    </div>
+</body>
+
+</html>

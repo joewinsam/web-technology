@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URK20CS1054 - Exp-5 Onkeyup</title>
+    <script>
+        function convert(){
+            var dollar=document.getElementById('dollar').value;
+            var rupee=dollar*78;
+            document.getElementById('result').innerHTML=rupee;
+        }
+
+
+    </script>
+</head>
+<body>
+    Dollar: <input type="text" id="dollar" onkeyup="convert()"> <br>
+    <div id="result" style="color: red;font-size:25px;">
+    </div>
+</body>
+
+</html>
